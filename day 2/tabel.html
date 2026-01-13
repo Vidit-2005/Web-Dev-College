@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center; 
+}
+        .period{
+            background-color: pink;
+        }
+        .day{
+            background-color: rgb(159, 158, 158);
+        }
+        .header{
+            display: flex;
+            align-items: baseline;
+        }
+        #first{
+            padding-right: 200px;
+        }
+    </style>
+</head>
+<body>
+    <p id = "heading">
+        <h1>Government Polytechnic 
+            college<br> Department of Computer Engineering <br>Efective From: 01-07-2026</h1>
+    </p>
+    <div class="header">
+        <p id="first">
+            semester 5 CT
+        </p>
+        <p align = "left">
+            R.No 306
+        </p>
+    </div>
+    <table border = "5" cellspacing = 1px>
+        <tr>
+            <th bgcolor="Yellow">Periods</th>
+            <th rowspan="2" class = "period">1 <br>9.00-9.30</th>
+            <th rowspan="2" class = "period">2 <br>9.55-10.50</th>
+            <th rowspan="2" class = "period">3 <br>11.00-11.55</th>
+            <th rowspan="2" class = "period">4 <br>11.55-1.00</th>
+            <th rowspan="2" class = "period">5 <br>2.00-2.50</th>
+            <th rowspan="2" class = "period">6 <br>2.55-3.45</th>
+            <th rowspan="2" class = "period">7 <br>3.45-4.30</th>
+        </tr>
+        <tr>
+            <th bgcolor="red">Days</th>    
+        </tr>
+        <tr>
+            <th class = "day">Monday</th>
+            <td align="center">IT0302</td>
+            <td align="center">IT0306</td>
+            <td align="center">IT0304</td>
+            <td align="center">IT0306</td>
+            <td align="center">IT0302</td>
+            <td colspan="2" align="center">IT0324</td>   
+        </tr>
+        <tr>
+            <th class = "day">Tuesday</th>
+            <td align="center" colspan="4" bgcolor = "cyan">IT0320/IT0322</td>
+            <td align="center" bgcolor="olive">IT0310</td>
+            <td align="center">IT0304</td>
+            <td align="center">IT308</td>
+        </tr>
+        <tr>
+            <th class = "day">Wednesday</th>
+            <td align="center" colspan="2" bgcolor="Yellow">Elective-I</td>
+            <td align="center">IT0306</td>
+            <td align="center">IT0310</td>
+            <td align="center">IT304</td>
+            <td align="center">IT308</td>
+            <td align="center">COUN</td>
+        </tr>
+        <tr>
+            <th class = "day">Thursday</th>
+            <td align="center">IT302</td>
+            <td align="center">IT0304</td>
+            <td align="center" colspan="2">PD0302</td>
+            <td align="center" colspan="3" bgcolor="green">IT0320/IT0322</td>
+        </tr>
+        <tr>
+            <th class = "day">Friday</th>
+            <td align="center">IT0308</td>
+            <td align="center">IT0306</td>
+            <td align="center">IT0308</td>
+            <td align="center">IT0302</td>
+            <td align="center" colspan="2" bgcolor="red">Elective-I</td>
+            <td align="center"></td>
+        </tr>
+    </table>
+</body>
+</html>
