@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="sample()" type="button">Click-Me</button>
+    <p id="demo">Hello My name is XYZ</p>
+    <p id="demo1"></p>
+    <input type="text" id="a" />
+    <input type="text" id="b" />
+    <p id="ans"></p>
+    <button onclick="sample1()" type="button">add</button>
+    <p class="Dem">Hello</p>
+    <p class="Dem">World</p>
+    <button onclick="sample2()" type="button">alert</button>
+    <br />
+    <button onclick="sample3()" type="button">Clcik me</button>
+    <script>
+      function sample() {
+        // var x = 2;
+        // document.getElementById("demo").innerHTML = "value of x = "+x;
+        document.getElementById("demo1").innerHTML =
+          document.getElementById("demo").innerText;
+      }
+      function sample1() {
+        document.getElementById("ans").innerHTML =
+          "Addition = " +
+          (parseInt(document.getElementById("a").value) +
+            parseInt(document.getElementById("b").value));
+      }
+      function sample2() {
+        var x = document.getElementsByClassName("Dem");
+        alert(x[0].innerHTML + " " + x[1].innerHTML);
+      }
+      function sample3() {
+        var btn = document.createElement("button");
+        var text = document.createTextNode("Click");
+        btn.appendChild(text);
+        document.body.appendChild(btn);
+      }
+    </script>
+  </body>
+</html>
