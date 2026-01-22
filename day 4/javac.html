@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Sample() {
+        const list = document.getElementById("pran");
+        if (list.firstElementChild) {
+          list.removeChild(list.firstElementChild);
+        }
+      }
+    </script>
+    <ul id="pran">
+      <li>hello</li>
+      <li>my</li>
+      <li>name is</li>
+      <li>pranjal</li>
+    </ul>
+    <button id="pran" onclick="Sample()">Click me</button>
+  </body>
+</html>
