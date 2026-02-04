@@ -1,0 +1,109 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Birth Day Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+        input, button {
+            padding: 8px;
+            margin-top: 10px;
+        }
+        #result {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Find the Day You Were Born 🎂</h2>
+
+    <label for="birthdate">Select your birthdate:</label><br>
+    <input type="date" id="birthdate"><br>
+
+    <button onclick="findDay()">Get Day</button>
+
+    <div id="result"></div>
+
+    <script>
+        function findDay() {
+            const birthdateInput = document.getElementById("birthdate").value;
+
+            if (!birthdateInput) {
+                document.getElementById("result").innerText = "Please select a date.";
+                return;
+            }
+
+            const date = new Date(birthdateInput);
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+            const dayName = days[date.getDay()];
+
+            document.getElementById("result").innerText =
+                "You were born on a " + dayName + " 🎉";
+        }
+    </script>
+
+</body>
+</html>
+ -->
+
+to pass explicit date and check wheter it is a weekend or not
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Birth Day Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+        input, button {
+            padding: 8px;
+            margin-top: 10px;
+        }
+        #result {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Find the Day You Were Born 🎂</h2>
+
+    <label for="birthdate">Select your birthdate:</label><br>
+    <input type="date" id="birthdate"><br>
+
+    <button onclick="findDay()">Get Day</button>
+
+    <div id="result"></div>
+
+    <script>
+        function findDay() {
+            const birthdateInput = document.getElementById("birthdate").value;
+
+            if (!birthdateInput) {
+                document.getElementById("result").innerText = "Please select a date.";
+                return;
+            }
+
+            const date = new Date(birthdateInput);
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+            const dayIndex = date.getDay();
+            const dayName = days[dayIndex];
+            const isWeekend = (dayIndex === 0 || dayIndex === 6) ? "It's a weekend! 🎉" : "It's a weekday.";
+
+            document.getElementById("result").innerText =
+                "You were born on a " + dayName + ". " + isWeekend;
+        }
+    </script>
+</body>
+</html>
