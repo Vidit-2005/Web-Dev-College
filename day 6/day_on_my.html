@@ -53,7 +53,7 @@
 </html>
  -->
 
-to pass explicit date and check wheter it is a weekend or not
+<!-- to pass explicit date and check wheter it is a weekend or not
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,7 +76,7 @@ to pass explicit date and check wheter it is a weekend or not
     </style>
 </head>
 <body>
-    <h2>Find the Day You Were Born 🎂</h2>
+    <h2>Enter the date</h2>
 
     <label for="birthdate">Select your birthdate:</label><br>
     <input type="date" id="birthdate"><br>
@@ -95,14 +95,105 @@ to pass explicit date and check wheter it is a weekend or not
             }
 
             const date = new Date(birthdateInput);
+            console.log(date);
             const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
+            console.log(date.getDay());
             const dayIndex = date.getDay();
+            
             const dayName = days[dayIndex];
             const isWeekend = (dayIndex === 0 || dayIndex === 6) ? "It's a weekend! 🎉" : "It's a weekday.";
 
             document.getElementById("result").innerText =
-                "You were born on a " + dayName + ". " + isWeekend;
+                isWeekend;
+        }
+    </script>
+</body>
+</html> -->
+
+<!-- how many milliseconds are there in todays date?
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Milliseconds in Today's Date</title>
+    <style> 
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+        button {
+            padding: 8px;
+            margin-top: 10px;
+        }
+        #result {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Calculate Milliseconds in Today's Date</h2>
+
+    <button onclick="calculateMilliseconds()">Get Milliseconds</button>
+
+    <div id="result"></div>
+
+    <script>
+        function calculateMilliseconds() {
+            const today = new Date();
+            const milliseconds = today.getTime();
+
+            document.getElementById("result").innerText =
+                "Milliseconds since "+ today.toDateString() +" : " + milliseconds;
+        }
+    </script>
+</body> -->
+
+ write js program to check how many days left for the christmas from today date
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Days Until Christmas</title>
+    <style> 
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+        button {
+            padding: 8px;
+            margin-top: 10px;
+        }
+        #result {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Calculate Days Until Christmas</h2>
+    <button onclick="daysUntilChristmas()">Get Days Left</button>
+    <div id="result"></div>
+    <script>
+        function daysUntilChristmas() {
+            const today = new Date();
+            const currentYear = today.getFullYear();
+            const christmas = new Date(currentYear, 11, 25); // December is month 11
+
+            // If Christmas has already passed this year, calculate for next year
+            if (today > christmas) {
+                christmas.setFullYear(currentYear + 1);
+            }
+
+            const timeDifference = christmas - today;
+            const daysLeft = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+
+            document.getElementById("result").innerText =
+                "Days left until Christmas: " + daysLeft;
         }
     </script>
 </body>
