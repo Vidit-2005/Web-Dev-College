@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="str">
+    <button onclick="validate()">Check</button>
+    <script>
+        function validatePhoneNumber(str){
+            var reg = /^\d{10}$/;
+            // var reg = /^[0-9]{10}$/;
+            return reg.test(str);
+        }
+        function validateMail(str){
+            var reg = /^[a-zA-Z0-9]+@[a-zA-Z]$/;
+            // var reg = /^[0-9]{10}$/;
+            return reg.test(str);
+        }
+        function validate(){
+            var phno = document.getElementById("str").value
+            if(validatePhoneNumber(phno)){
+                alert ("Validation Success");
+            }else{
+                alert ("Valiation Unsuccessful")
+            }
+        }
+    </script>
+</body>
+</html>
