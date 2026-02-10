@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color on Hover</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+        p {
+            font-size: 18px;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="text">Hover over this paragraph</p>
+
+    <script>
+        let p = document.getElementById("text");
+
+        p.onmouseover = () => p.style.color = "red";
+        p.onmouseout = () => p.style.color = "black";
+    </script>
+
+</body>
+</html>

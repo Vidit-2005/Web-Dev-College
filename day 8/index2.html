@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Screen Coordinates</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+        #result {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" style="background-color: brown; width: 200px; height: 200px;"></div>
+    <h2>Tap / Click anywhere on the screen</h2>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById("box").onclick = (e) =>
+            document.getElementById("result").innerText =
+            "X: " + e.screenX + " , Y: " + e.screenY;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Keypad Image Map</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+      color: darkblue;
+    }
+
+    img {
+      width: 400px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Keypad Using Image Map</h2>
+
+  <!-- Keypad Image -->
+  <img src="dialler.png" usemap="#keypadmap" id="keypadImage">
+
+  <!-- Image Map -->
+  <map name="keypadmap">
+ <!-- Row 1 -->
+    <area shape="circle" coords="110,90,55" href="#" onclick="pressKey(event,'1')">
+    <area shape="circle" coords="230,90,55" href="#" onclick="pressKey(event,'2')">
+    <area shape="circle" coords="350,90,55" href="#" onclick="pressKey(event,'3')">
+
+    <!-- Row 2 -->
+    <area shape="circle" coords="110,220,55" href="#" onclick="pressKey(event,'4')">
+    <area shape="circle" coords="230,220,55" href="#" onclick="pressKey(event,'5')">
+    <area shape="circle" coords="350,220,55" href="#" onclick="pressKey(event,'6')">
+
+    <!-- Row 3 -->
+    <area shape="circle" coords="110,350,55" href="#" onclick="pressKey(event,'7')">
+    <area shape="circle" coords="230,350,55" href="#" onclick="pressKey(event,'8')">
+    <area shape="circle" coords="350,350,55" href="#" onclick="pressKey(event,'9')">
+
+    <!-- Row 4 -->
+    <area shape="circle" coords="110,480,55" href="#" onclick="pressKey(event,'*')">
+    <area shape="circle" coords="230,480,55" href="#" onclick="pressKey(event,'0')">
+    <area shape="circle" coords="350,480,55" href="#" onclick="pressKey(event,'#')">
+  </map>
+
+  <!-- Output Display -->
+  <div id="output">Click any button...</div>
+
+  <script>
+    function pressKey(event, key) {
+
+      // Prevent page jump
+      event.preventDefault();
+
+      // Mouse click coordinates
+      let x = event.clientX;
+      let y = event.clientY;
+
+      // Button center coordinates from map
+      let areaCoords = event.target.coords.split(",");
+
+      let centerX = areaCoords[0];
+      let centerY = areaCoords[1];
+      let radius = areaCoords[2]; 
+
+      // Display output
+      document.getElementById("output").innerHTML =
+        `<b>Key Pressed:</b> ${key} <br>
+         <b>Mouse Click Position:</b> X = ${x}, Y = ${y} <br>
+         <b>Circle Center:</b> (${centerX}, ${centerY}) <br>
+         <b>Radius:</b> ${radius}px`;
+    }
+  </script>
+
+</body>
+</html>
