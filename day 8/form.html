@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <select id="browsers" onchange="preferedBrowser()">
+            <option value="Chrome">Chrome</option>
+            <option value="Internet Explorer">Internet Explorer</option>
+            <option value="Firefix">firefix</option>
+        </select>
+        <input type="text" id="frame" onkeypress="myFunction()">
+        
+    </form>
+    <script>
+        function preferedBrowser(){
+            prefer = document.forms[0].browsers.value
+            alert(prefer)
+        }
+        function myFunction(x){
+            var x = document.getElementById("frame").value
+            x=x.toUpperCase();
+        }
+        function func(x){
+            var x = document.getElementById("frame").value
+            x = x.color.red;
+        }
+    </script>
+</body>
+</html>
