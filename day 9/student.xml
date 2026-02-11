@@ -1,0 +1,21 @@
+<!DOCTYPE student [
+<!ELEMENT student (name, branch, yoj, email)>
+<!ELEMENT name (#PCDATA)> 
+<!ELEMENT branch (#PCDATA)> 
+<!ELEMENT yoj (#PCDATA)> 
+<!ELEMENT email (#PCDATA)> 
+<!ENTITY writer "rishika"> 
+<!ENTITY copyrights "PM"> 
+<!ENTITY nbsp "&#xAB;">
+<!ATLIST student name CDATA #REQUIRED>
+<!ATLIST student branch CDATA #REQUIRED>
+<!ATLIST student yoj CDATA #REQUIRED>
+<!ATLIST student email CDATA #REQUIRED>
+]>
+
+<students>
+    <student>
+        <name>NAME -: era</name>
+        <name>NAME -: era</name>
+        <name>NAME -: era</name>
+        <name>NAME -: era</name>
