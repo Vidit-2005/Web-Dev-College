@@ -1,21 +1,77 @@
-<!DOCTYPE student [
-<!ELEMENT student (name, branch, yoj, email)>
+<!DOCTYPE students [
+<!ELEMENT student (student+)>
+<!ELEMENT student (name, branch, yoj, email, footer)>
+<!ATTLIST student program CDATA #REQUIRED>
 <!ELEMENT name (#PCDATA)> 
 <!ELEMENT branch (#PCDATA)> 
 <!ELEMENT yoj (#PCDATA)> 
 <!ELEMENT email (#PCDATA)> 
-<!ENTITY writer "rishika"> 
-<!ENTITY copyrights "PM"> 
+<!ELEMENT footer (#PCDATA)>
+<!ENTITY writer "Kanak"> 
+<!ENTITY copyrights "KG"> 
 <!ENTITY nbsp "&#xAB;">
-<!ATLIST student name CDATA #REQUIRED>
-<!ATLIST student branch CDATA #REQUIRED>
+<!-- <!ATLIST student name CDATA #REQUIRED>
+<!ATLIST student brach CDATA #REQUIRED>
 <!ATLIST student yoj CDATA #REQUIRED>
-<!ATLIST student email CDATA #REQUIRED>
+<!ATLIST student email CDATA #REQUIRED> -->
 ]>
 
 <students>
-    <student>
-        <name>NAME -: era</name>
-        <name>NAME -: era</name>
-        <name>NAME -: era</name>
-        <name>NAME -: era</name>
+    <student program = "B.Tech">
+        <name> NAME -: Graphic era</name>
+        <branch> BRANCH -: Deemed</branch>
+        <yoj> YOJ -: 2023</yoj>
+        <email>EMAIL -: kkg123@gmail.com</email>
+        <footer> Kanak KG</footer>
+    </student>
+    <student program = "BCA">
+        <name> NAME -: GEU</name>
+        <branch> BRANCH -: Deemed</branch>
+        <yoj> YOJ -: 2023</yoj>
+        <email>EMAIL -: kkg123@gmail.com</email>
+        <footer> Kanak KG</footer>
+    </student>
+    <student program = "B.Tech">
+        <name> NAME -: Graphic era</name>
+        <branch> BRANCH -: Deemed</branch>
+        <yoj> YOJ -: 2023</yoj>
+        <email>EMAIL -: kkg123@gmail.com</email>
+        <footer> Kanak KG</footer>
+    </student>
+    <student program = "B.Tech">
+        <name> NAME -: Graphic era</name>
+        <branch> BRANCH -: Deemed</branch>
+        <yoj> YOJ -: 2023</yoj>
+        <email>EMAIL -: kkg123@gmail.com</email>
+        <footer> Kanak KG</footer>
+    </student>
+    <student program = "B.Tech">
+        <name> NAME -: Graphic era</name>
+        <branch> BRANCH -: Deemed</branch>
+        <yoj> YOJ -: 2023</yoj>
+        <email>EMAIL -: kkg123@gmail.com</email>
+        <footer> Kanak KG</footer>
+    </student>
+    <student program = "B.Tech">
+        <name> NAME -: Graphic era</name>
+        <branch> BRANCH -: Deemed</branch>
+        <yoj> YOJ -: 2023</yoj>
+        <email>EMAIL -: kkg123@gmail.com</email>
+        <footer> Kanak KG</footer>
+    </student>
+    <student program = "B.Tech">
+        <name> NAME -: Graphic era</name>
+        <branch> BRANCH -: Deemed</branch>
+        <yoj> YOJ -: 2023</yoj>
+        <email>EMAIL -: kkg123@gmail.com</email>
+        <footer> Kanak KG</footer>
+    </student>
+    <student program = "B.Tech">
+        <name> NAME -: Graphic era</name>
+        <branch> BRANCH -: Deemed</branch>
+        <yoj> YOJ -: 2023</yoj>
+        <email>EMAIL -: kkg123@gmail.com</email>
+        <footer> Kanak KG</footer>
+    </student>
+
+</students>
